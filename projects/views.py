@@ -3,8 +3,7 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponse
 # Create your views here.
 
-def sprojects(request, pk):
-        
+def project(request, pk):        
         return render(request, 'projects/single-project.html')
 
 def projects(request):
