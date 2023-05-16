@@ -3,9 +3,11 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponse
 # Create your views here.
 
-def projetcs(request, pk):
-    return HttpResponse(f"Project number {pk}")
+def sprojects(request):
+        
+        return render(request, 'single-project.html')
 
-
-def hpage(request):
-    return HttpResponse("Home Page of projects")
+def projects(request, pk):
+        if pk == None:
+                return render(request, 'projects.html')
+        return render(request, 'single-project.html')
