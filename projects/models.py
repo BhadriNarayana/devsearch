@@ -44,7 +44,7 @@ class Review(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=200)
-    id = models.UUIDField(default=uuid.uuid4, unique = True, primary_key=True, editable=True)
+    id = models.UUIDField(default=uuid.uuid4, unique = True, primary_key=True, editable=False)
 
     created = models.DateTimeField(auto_now_add = True)
 
