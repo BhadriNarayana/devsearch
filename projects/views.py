@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Project, Review, Tag
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, redirect
 
 from .forms import ProjectForm
 # Create your views here.
@@ -14,6 +14,13 @@ def projects(request):
         return render(request, 'projects/projects.html', {'projects':projects})
 
 def create_project(request):
+
+        if request.method == 'POST':
+                form = ProjectForm(request.POST)
+
+                if form.is_valid():
+                        form.save()
+                        redirect('projects')
 
         form = ProjectForm()
 
