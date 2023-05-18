@@ -20,7 +20,7 @@ def create_project(request):
 
                 if form.is_valid():
                         form.save()
-                        redirect('projects')
+                        return redirect('projects')
 
         form = ProjectForm()
 
@@ -38,7 +38,7 @@ def update_project(request, pk):
 
                 if form.is_valid():
                         form.save()
-                        redirect('projects')
+                        return redirect('projects')
 
 
         return render(request, 'projects/project-form.html', {'form':form})
