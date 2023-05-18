@@ -42,3 +42,13 @@ def update_project(request, pk):
 
 
         return render(request, 'projects/project-form.html', {'form':form})
+
+
+def delete_project(request):
+        project = Project.objects.all()
+
+        if request.method == 'POST':
+                project.delete()
+                return redirect('projects')
+
+        return render(request, 'project/delete-object.html', {'project':project})
