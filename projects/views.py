@@ -25,3 +25,9 @@ def create_project(request):
         form = ProjectForm()
 
         return render(request, 'projects/project-form.html', {'form':form})
+
+
+
+def update_project(request, pk):
+
+        return render()
