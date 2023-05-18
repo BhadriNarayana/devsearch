@@ -29,7 +29,7 @@ def create_project(request):
 
 
 def update_project(request, pk):
-        project = Project.objects.get(id = int(pk))
+        project = Project.objects.get(id = pk)
 
         form = ProjectForm(instance = project)
 
@@ -41,4 +41,4 @@ def update_project(request, pk):
                         redirect('projects')
 
 
-        return render('projects/project-form.html', {'form':form})
+        return render(request, 'projects/project-form.html', {'form':form})

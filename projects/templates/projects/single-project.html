@@ -1,6 +1,8 @@
 {% extends 'main.html' %}
 
-{% block content %}<h1>{{project.title}}</h1>
+{% block content %}
+<span style = "2px solid black bottom"> <a href = "{% url 'update-project' project.id%}">Edit Project</a></span>
+<h1>{{project.title}}</h1>
 {% for tag in  project.tags.all%}
 <span style = "border: 2px solid black">{{tag}}</span>
 {% endfor %}
