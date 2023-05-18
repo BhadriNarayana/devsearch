@@ -2,7 +2,7 @@
 
 {% block content %}
 <span style = "2px solid black bottom"> <a href = "{% url 'update-project' project.id%}">Edit Project</a></span>
-<span style = "2px solid black bottom"> <a href = "{% url 'delete-project' project.id%}">Edit Project</a></span>
+<span style = "2px solid black bottom"> <a href = "{% url 'delete-project' project.id%}">Delete Project</a></span>
 
 <h1>{{project.title}}</h1>
 {% for tag in  project.tags.all%}
