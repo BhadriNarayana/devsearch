@@ -51,4 +51,4 @@ def delete_project(request, pk):
                 project.delete()
                 return redirect('projects')
 
-        return render(request, 'project/delete-object.html', {'project':project})
+        return render(request, 'projects/delete-object.html', {'project':project})

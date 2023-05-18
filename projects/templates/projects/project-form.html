@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<p>Are you sure you want to delete {{project}}</p>
+
 <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
