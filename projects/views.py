@@ -29,5 +29,16 @@ def create_project(request):
 
 
 def update_project(request, pk):
+        project = Project.objects.get(id = int(pk))
 
-        return render()
+        form = ProjectForm(instance = project)
+
+        if request.method == 'POST':
+                form = ProjectForm(request.POST, instance = project)
+
+                if form.is_valid():
+                        form.save()
+                        redirect('projects')
+
+
+        return render('projects/project-form.html', {'form':form})
