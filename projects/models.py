@@ -8,7 +8,7 @@ class Project(models.Model):
     demo_link = models.CharField(max_length=2000, null =True, blank = True)
     source_link = models.CharField(max_length=2000, null = True, blank = True)
 
-    featured_image = models.ImageField(null = True, blank = True, default = 'static/images/default.jpg')
+    featured_image = models.ImageField(null = True, blank = True, default = 'images/default.jpg')
 
     created = models.DateTimeField(auto_now_add=True)
     tags = models.ManyToManyField('Tag', blank = True)
