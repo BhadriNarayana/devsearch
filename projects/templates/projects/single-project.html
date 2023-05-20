@@ -7,7 +7,7 @@
 
 <h1>{{project.title}}</h1>
 
-<img src="{{project.featured_image.url}}" alt="">
+<img style = "width: 100vw; height: 50vh;" src="{{project.featured_image.url}}" alt="">
 {% for tag in  project.tags.all%}
 <span style = "border: 2px solid black">{{tag}}</span>
 {% endfor %}
