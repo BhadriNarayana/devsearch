@@ -61,7 +61,7 @@
           <div class="column">
             <div class="card project">
               <a href="{% url 'project' project.id %}" class="project">
-                <img class="project__thumbnail" src="images/project-b.png" alt="project thumbnail" />
+                <img class="project__thumbnail" src="{{project.featured_image.url}}" alt="project thumbnail" />
                 <div class="card__body">
                   <h3 class="project__title">DevSearch UI Design</h3>
                   <p><a class="project__author" href="profile.html">By Shahriar P. Shuvo</a></p>
@@ -85,6 +85,23 @@
             </div>
           </div>
           {% endfor %}
+
+          <div class="pagination">
+            <ul class="container">
+              <li><a href="#" class="btn btn--disabled">&#10094; Prev</a></li>
+              <li><a href="#" class="btn btn--sub">01</a></li>
+              <li><a href="#" class="btn">02</a></li>
+              <li><a href="#" class="btn">03</a></li>
+              <li><a href="#" class="btn">04</a></li>
+              <li><a href="#" class="btn">05</a></li>
+              <li><a href="#" class="btn">06</a></li>
+              <li><a href="#" class="btn">07</a></li>
+              <li><a href="#" class="btn">08</a></li>
+              <li><a href="#" class="btn">09</a></li>
+              <li><a href="#" class="btn">10</a></li>
+              <li><a href="#" class="btn">Next &#10095;</a></li>
+            </ul>
+          </div>
 
 
 
