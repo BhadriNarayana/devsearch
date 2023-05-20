@@ -3,7 +3,7 @@
 
 {% block content %}<h2>Projects template</h2>
 
-{% for project in projects %} <h1> <a href="{% url 'project' project.id%}"> {{project.title}}</a></h1><hr> {% for tag in  project.tags.all%} <span style = "border: 1px solid black">{{tag}}</span>{% endfor %} <hr><hr>{% endfor %}
+{% comment %} <h1> <a href="{% url 'project' project.id%}"> {{project.title}}</a></h1><hr> {% for tag in  project.tags.all%} <span style = "border: 1px solid black">{{tag}}</span>{% endfor %} <hr><hr> {% endcomment %}
 
 <main class="projects">
     <section class="hero-section text-center">
@@ -56,9 +56,11 @@
             </div>
           </div>
 
+          {% for project in projects %} 
+
           <div class="column">
             <div class="card project">
-              <a href="single-project.html" class="project">
+              <a href="{% url 'project' project.id %}" class="project">
                 <img class="project__thumbnail" src="images/project-b.png" alt="project thumbnail" />
                 <div class="card__body">
                   <h3 class="project__title">DevSearch UI Design</h3>
@@ -82,7 +84,7 @@
               </a>
             </div>
           </div>
-
+          {% endfor %}
 
 
 
