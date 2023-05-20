@@ -1,10 +1,13 @@
 {% extends 'main.html' %}
 
 {% block content %}
+
 <span style = "2px solid black bottom"> <a href = "{% url 'update-project' project.id%}">Edit Project</a></span>
 <span style = "2px solid black bottom"> <a href = "{% url 'delete-project' project.id%}">Delete Project</a></span>
 
 <h1>{{project.title}}</h1>
+
+<img src="{{project.featured_image.url}}" alt="">
 {% for tag in  project.tags.all%}
 <span style = "border: 2px solid black">{{tag}}</span>
 {% endfor %}
