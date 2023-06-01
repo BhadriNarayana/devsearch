@@ -1,7 +1,6 @@
 {% extends 'main.html' %}
 
-{% block content %}
-<h1>{{tp}}</h1>
+{% block content %}        
 <form action = "" method="POST" enctype = "multipart/form-data">
     {% csrf_token %}
     {{form.as_p}}
@@ -20,7 +19,9 @@
                 <!-- Input:Text -->
                 
                 <div class="form__field">
-                    {% for field in  form%}{% endfor %}
+                    {% for field in  form%}
+                    {{field.label}}: <br> 
+                    {{field}} <br>  {% endfor %}
                     <label for="formInput#text">Text Field: </label>
                     <input class="input input--text" id="formInput#text" type="text" name="text"
                         placeholder="Enter text" />
