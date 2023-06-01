@@ -15,7 +15,8 @@
                 {% for field in  form%}
                 <div class="form__field">
                     
-                    {% comment %} <label for="{{'id_'|add:field.name}}">{{field.label}}</label> {% endcomment %}
+                    <label for="{{'id_'|add:field.name}}">{{field.label}}</label>
+                    
                     {{field}}
                 </div>
                 {% endfor %}
