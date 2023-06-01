@@ -12,16 +12,13 @@
             <form class="form" method="POST" action = "" enctype = "multipart/form-data">
                 {% csrf_token %}
                 <!-- Input:Text -->
-                
+                {% for field in  form%}
                 <div class="form__field">
-                    {% for field in  form%}
-                    {{field.label}}: <br> 
-                    {{field}} <br>  {% endfor %}
-                    <label for="formInput#text">Text Field: </label>
-                    <input class="input input--text" id="formInput#text" type="text" name="text"
-                        placeholder="Enter text" />
+                    
+                    <label for="{{'id_'|add:field.name}}">{{field.label}}</label>
+                    {{field}}
                 </div>
-
+                {% endfor %}
                 <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
             </form>
         </div>
