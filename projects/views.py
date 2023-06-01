@@ -32,6 +32,7 @@ def update_project(request, pk):
         project = Project.objects.get(id = pk)
 
         form = ProjectForm(instance = project)
+        tp = 3
 
         if request.method == 'POST':
                 form = ProjectForm(request.POST,request.FILES, instance = project)
@@ -41,7 +42,7 @@ def update_project(request, pk):
                         return redirect('projects')
 
 
-        return render(request, 'projects/project-form.html', {'form':form})
+        return render(request, 'projects/project-form.html', {'form':form, 'tp':tp})
 
 
 def delete_project(request, pk):
