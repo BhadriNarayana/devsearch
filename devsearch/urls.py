@@ -27,7 +27,7 @@ def hp(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', hp),
+    path('', include('users.urls')),
     path('projects/', include('projects.urls')),
 ]
 
