@@ -23,7 +23,7 @@ class Profile(models.Model):
     id = models.UUIDField(default = uuid.uuid4, primary_key=True, unique=True, editable=False)
 
 
-    def __init__(self):
+    def __str__(self):
         return str(self.user.username)
 
 
