@@ -30,3 +30,5 @@ class Profile(models.Model):
 
 
 
+class Skill(models.Model):
+    
