@@ -23,4 +23,9 @@ class Profile(models.Model):
     id = models.UUIDField(default = uuid.uuid4, primary_key=True, unique=True, editable=False)
 
 
+    def __init__(self):
+        return self.name
+
+
+
 
