@@ -3,4 +3,4 @@ from . models import Profile, Skill
 # Register your models here.
 admin.site.register(Profile)
 
-admin.site.register()
+admin.site.register(Skill)
