@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib
+from django.contrib.auth.models import User
 # Create your models here.
 
 class Profile(models.Model):
@@ -20,6 +20,6 @@ class Profile(models.Model):
     created = models.DateTimeField(auto_now_add=True)
 
     id = models.UUIDField(default = uuid.uuid4, primary_key=True, unique=True, editable=False)
-    
+
 
 
