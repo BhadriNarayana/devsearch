@@ -24,7 +24,7 @@ class Profile(models.Model):
 
 
     def __init__(self):
-        return self.name
+        return str(self.user.username)
 
 
 
