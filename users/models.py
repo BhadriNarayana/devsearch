@@ -19,6 +19,7 @@ class Profile(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
 
-    """ id = models. """
+    id = models.UUIDField(default = uuid.uuid4, primary_key=True, unique=True, editable=False)
+    
 
 
