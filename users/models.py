@@ -15,3 +15,6 @@ class Profile(models.Model):
     social_linkedin = models.CharField(max_length = 200, blank=True, null = True)
     social_youtube = models.CharField(max_length = 200, blank=True, null = True)
 
+    social_website = models.CharField(max_length = 200, blank=True, null = True)
+
+
