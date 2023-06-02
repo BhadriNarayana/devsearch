@@ -1,8 +1,10 @@
 from django.db import models
 import uuid
+from users.models import Profile
 # Create your models here.
 
 class Project(models.Model):
+    owner = models.ForeignKey()
     title = models.CharField(max_length = 200)
     description = models.TextField(null = True, blank = True)
     demo_link = models.CharField(max_length=2000, null =True, blank = True)
