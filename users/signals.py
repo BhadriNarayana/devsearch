@@ -18,3 +18,4 @@ def deleteUser(sender, instance, created, **kwargs):
 
 
 post_save.connect(profileUpdated, sender = Profile)
+post_delete.connect(deleteUser, sender = Profile)
