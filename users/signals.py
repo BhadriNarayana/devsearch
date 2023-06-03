@@ -3,7 +3,7 @@ from .models import Profile
 
 
 def profileUpdated(sender, instance, created, **kwargs):
-    print("profile saved")
+    print("profile saved!")
 
 
 post_save.connect(profileUpdated, sender = Profile)
