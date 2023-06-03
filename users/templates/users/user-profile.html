@@ -27,11 +27,13 @@
 
                 
 
-                {% if profile.s %}{% endif %}
-
+                {% if profile.social_twitter %}
                 <li>
-                  <a title="Twitter" href="{{profile.social_twitter}}" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
-                </li>
+                    <a title="Twitter" href="{{profile.social_twitter}}" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                  </li>
+                {% endif %}
+
+                
 
                 {% if profile.s %}{% endif %}
 
