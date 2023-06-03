@@ -4,7 +4,9 @@ from django.dispatch import receiver
 
 @receiver(post_save, sender = Profile)
 def createProfile(sender, instance, created, **kwargs):
-    
+    if created:
+        user = created
+        profile = Profile.objects
 
 
 @receiver(post_delete, sender = Profile)
