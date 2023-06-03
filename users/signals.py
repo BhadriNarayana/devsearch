@@ -9,7 +9,7 @@ def profileUpdated(sender, instance, created, **kwargs):
     print("Created", created)
 
 
-
+@receiver(post_delete, sender = Profile)
 def deleteUser(sender, instance, created, **kwargs):
     print("Deleting user")
 
