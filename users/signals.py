@@ -19,7 +19,9 @@ def createProfile(sender, instance, created, **kwargs):
 def deleteUser(sender, instance, created, **kwargs):
     user = instance.user
     user.delete()
-    
+
+
+
 
 
 
