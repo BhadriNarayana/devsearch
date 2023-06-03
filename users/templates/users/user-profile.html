@@ -35,11 +35,13 @@
 
                 
 
-                {% if profile.social_linkedin %}{% endif %}
-
+                {% if profile.social_linkedin %}
                 <li>
-                  <a title="LinkedIn" href="{{profile.social_linkedin}}" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-                </li>
+                    <a title="LinkedIn" href="{{profile.social_linkedin}}" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                  </li>
+                  {% endif %}
+
+                
 
                 {% if profile.s %}{% endif %}
                 
