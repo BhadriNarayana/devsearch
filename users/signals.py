@@ -10,7 +10,7 @@ def profileUpdated(sender, instance, created, **kwargs):
 
 
 def deleteUser(sender, instance, created, **kwargs):
-    print("Delet")
+    print("Delete")
 
 
 
