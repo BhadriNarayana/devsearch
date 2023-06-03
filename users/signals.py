@@ -3,7 +3,7 @@ from .models import Profile
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 
-""" @receiver(post_save, sender = User) """
+@receiver(post_save, sender = User)
 def createProfile(sender, instance, created, **kwargs):
     if created:
         user = instance
