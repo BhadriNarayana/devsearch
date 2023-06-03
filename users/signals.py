@@ -3,7 +3,7 @@ from .models import Profile
 from django.dispatch import receiver
 
 @receiver(post_save, sender = Profile)
-def profileUpdated(sender, instance, created, **kwargs):
+def createProfile(sender, instance, created, **kwargs):
     print("profile saved!")
     print("Sender:", sender)
     print("Created", created)
