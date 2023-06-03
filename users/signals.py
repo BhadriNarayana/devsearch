@@ -7,8 +7,10 @@ def createProfile(sender, instance, created, **kwargs):
     if created:
         user = created
         profile = Profile.objects.create(
-            user = user
+            user = user,
+            username = user.username,
             
+
         )
 
 
