@@ -3,10 +3,10 @@ from .models import Profile
 from django.dispatch import receiver
 from django.contrib.auth.models import User
 
-@receiver(post_save, sender = User)
+""" @receiver(post_save, sender = User) """
 def createProfile(sender, instance, created, **kwargs):
     if created:
-        user = created
+        user = instance
         profile = Profile.objects.create(
             user = user,
             username = user.username,
@@ -15,7 +15,7 @@ def createProfile(sender, instance, created, **kwargs):
         )
 
 
-@receiver(post_delete, sender = Profile)
+""" @receiver(post_delete, sender = Profile) """
 def deleteUser(sender, instance, created, **kwargs):
     user = instance.user
     user.delete()
@@ -24,6 +24,6 @@ def deleteUser(sender, instance, created, **kwargs):
 
 
 
-
-""" post_save.connect(profileUpdated, sender = Profile)
+""" 
+post_save.connect(createProfile, sender = User)
 post_delete.connect(deleteUser, sender = Profile) """
