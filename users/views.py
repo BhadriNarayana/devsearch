@@ -13,7 +13,7 @@ def userProfile(request, pk):
     profile = Profile.objects.get(id = pk)
 
     topSkills = Profile.skill_set.exclude(description__exact = "")
-    otherSkills
-    return render(request, 'users/user-profile.html', {'profile':profile})
+    otherSkills = Profile.skill_set.exclude(description = "")
+    return render(request, 'users/user-profile.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
     
 
