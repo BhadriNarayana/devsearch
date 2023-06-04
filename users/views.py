@@ -17,4 +17,6 @@ def userProfile(request, pk):
     return render(request, 'users/user-profile.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
     
 
-def loginPage()
+
+def loginPage(request):
+    return render(request, 'users/login_register.html')
