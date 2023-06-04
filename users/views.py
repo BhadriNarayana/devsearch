@@ -28,6 +28,8 @@ def loginPage(request):
         except:
             print("User does not exist")   
 
-        uesr = authenticate(request, username = username, password = password)     
+        user = authenticate(request, username = username, password = password)
+
+
        
     return render(request, 'users/login_register.html', {})
