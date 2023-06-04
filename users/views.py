@@ -17,7 +17,6 @@ def userProfile(request, pk):
     return render(request, 'users/user-profile.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
     
 
-
 def loginPage(request):
     if request.method == 'POST':
         username = request.POST['username']
