@@ -26,6 +26,8 @@ def loginPage(request):
         try:
             user = User.objects.get(username = username)
         except:
-            print("User does not exist")    
+            print("User does not exist")   
+
+        uesr = authenticate(request, username = username, password = password)     
        
     return render(request, 'users/login_register.html', {})
