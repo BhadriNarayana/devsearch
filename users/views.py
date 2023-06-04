@@ -24,6 +24,6 @@ def loginPage(request):
         password = request.POST['password']
 
         try:
-            user = User.objects.get(username = username)
+            user = User.objects.get(username= username)
        
     return render(request, 'users/login_register.html', {})
