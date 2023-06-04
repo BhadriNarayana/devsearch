@@ -20,5 +20,5 @@ def userProfile(request, pk):
 
 def loginPage(request):
     if request.method == 'POST':
-        
+        print(request.POST)
     return render(request, 'users/login_register.html', {})
