@@ -19,4 +19,4 @@ def userProfile(request, pk):
 
 
 def loginPage(request):
-    return render(request, 'users/login_register.html')
+    return render(request, 'users/login_register.html', {})
