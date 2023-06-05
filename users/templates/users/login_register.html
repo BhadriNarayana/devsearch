@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% if  %}{% endif %}
 <form action="{% url 'login' %}" method = "POST">
     {% csrf_token %}
     <input type="text" name = "username" placeholder = "username">
