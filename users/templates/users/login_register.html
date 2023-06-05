@@ -3,6 +3,9 @@
 {% block content %}
 
 {% if page == register %}
+
+
+
 {% else %}
 <form action="{% url 'login' %}" method = "POST">
     {% csrf_token %}
