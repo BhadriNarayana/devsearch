@@ -65,4 +65,6 @@ def registerUser(request):
             user.username = user.username.lower()
             user.save()
 
+            messages.success(request, "User account created successfully!")
+
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
