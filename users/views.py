@@ -38,7 +38,7 @@ def loginUser(request):
             login(request, user)
             return redirect('profiles')
         else:
-            print("Username or Password is incorrect")
+            messages.error(request, "Username or Password is incorrect")
        
     return render(request, 'users/login_register.html')
 
