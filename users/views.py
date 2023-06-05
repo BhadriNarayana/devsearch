@@ -38,6 +38,7 @@ def loginPage(request):
             login(request, user)
             return redirect('profiles')
         else:
+            print("")
 
        
     return render(request, 'users/login_register.html')
