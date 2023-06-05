@@ -2,7 +2,7 @@
 
 {% block content %}
 
-{% if page == login %}
+{% if page == register %}
 <form action="{% url 'login' %}" method = "POST">
     {% csrf_token %}
     <input type="text" name = "username" placeholder = "username">
