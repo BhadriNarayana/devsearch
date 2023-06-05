@@ -21,6 +21,7 @@ def userProfile(request, pk):
 def loginUser(request):
     if request.user.is_authenticated:
         return redirect('profiles')
+    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
