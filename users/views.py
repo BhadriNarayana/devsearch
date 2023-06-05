@@ -69,6 +69,9 @@ def registerUser(request):
 
             login(request, user)
             return redirect('profiles')
+        else:
+            messages.success(request, 'Error occured during registration')
+
 
 
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
