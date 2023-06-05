@@ -44,7 +44,7 @@ def update_project(request, pk):
 
         return render(request, 'projects/project-form.html', {'form':form})
 
-
+@login_required(login_url = "login")
 def delete_project(request, pk):
         project = Project.objects.get(id = pk)
 
