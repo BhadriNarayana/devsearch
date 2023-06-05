@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
-
 def profiles(request):
     profiles = Profile.objects.all()
     return render(request, 'users/profiles.html', {'profiles':profiles})
