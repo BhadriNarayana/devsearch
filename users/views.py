@@ -60,4 +60,7 @@ def registerUser(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
 
+        if form.is_valid():
+            
+
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
