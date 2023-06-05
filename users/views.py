@@ -42,7 +42,7 @@ def loginUser(request):
         else:
             messages.error(request, "Username or Password is incorrect")
        
-    return render(request, 'users/login_register.html')
+    return render(request, 'users/login_register.html', {'page': page})
 
 
 def logoutUser(request):
@@ -53,4 +53,4 @@ def logoutUser(request):
 
 def registerUser(request):
     page = 'register'
-    return render(request, 'user/login_register.html', {})
+    return render(request, 'users/login_register.html', {})
