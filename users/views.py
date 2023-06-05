@@ -61,6 +61,6 @@ def registerUser(request):
         form = UserCreationForm(request.POST)
 
         if form.is_valid():
-            
+            user = form.save(commit=False)
 
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
