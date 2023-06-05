@@ -47,3 +47,7 @@ def logoutUser(request):
     logout(request)
     messages.error(request, "User logged out successfully")
     return redirect("login")
+
+
+def registerUser(request):
+    return
