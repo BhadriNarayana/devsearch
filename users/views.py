@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Profile
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 
 # Create your views here.
