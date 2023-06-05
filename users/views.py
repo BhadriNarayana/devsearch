@@ -28,6 +28,7 @@ def loginPage(request):
 
         try:
             user = User.objects.get(username = username)
+            print(user)
         except:
             print("User does not exist")   
 
