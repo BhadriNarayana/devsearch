@@ -18,6 +18,7 @@ def userProfile(request, pk):
     return render(request, 'users/user-profile.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
     
 
+
 def loginUser(request):
     if request.user.is_authenticated:
         return redirect('profiles')
@@ -50,4 +51,5 @@ def logoutUser(request):
 
 
 def registerUser(request):
+    page = 'register'
     return render(request, 'user/login_register.html', {})
