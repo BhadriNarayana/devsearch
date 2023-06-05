@@ -28,7 +28,7 @@ def create_project(request):
         return render(request, 'projects/project-form.html', {'form':form, 'tp':3})
 
 
-
+@login_required(login_url = "login")
 def update_project(request, pk):
         project = Project.objects.get(id = pk)
 
