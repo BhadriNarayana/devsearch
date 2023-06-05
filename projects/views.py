@@ -13,6 +13,7 @@ def projects(request):
         projects = Project.objects.all()
         return render(request, 'projects/projects.html', {'projects':projects})
 
+@login_required(login_url = "login")
 def create_project(request):
 
         if request.method == 'POST':
