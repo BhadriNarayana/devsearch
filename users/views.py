@@ -32,7 +32,7 @@ def loginPage(request):
             print("User does not exist")   
 
         user = authenticate(request, username = username, password = password)
-        print(user)
+        
 
         if user is not None:
             login(request, user)
