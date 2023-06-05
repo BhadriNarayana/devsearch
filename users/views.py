@@ -55,4 +55,5 @@ def logoutUser(request):
 
 def registerUser(request):
     page = 'register'
+    
     return render(request, 'users/login_register.html', {'page':page})
