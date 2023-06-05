@@ -20,7 +20,6 @@ def userProfile(request, pk):
     
 
 def loginPage(request):
-    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -37,4 +36,4 @@ def loginPage(request):
             return redirect('profiles')
 
        
-    return render(request, 'users/login_register.html', {})
+    return render(request, 'users/login_register.html')
