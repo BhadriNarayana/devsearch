@@ -56,5 +56,5 @@ def logoutUser(request):
 def registerUser(request):
     page = 'register'
     form = UserCreationForm()
-    
-    return render(request, 'users/login_register.html', {'page':page})
+
+    return render(request, 'users/login_register.html', {'page':page, 'form':form})
