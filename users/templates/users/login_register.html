@@ -5,10 +5,10 @@
 {% if page == 'register' %}
 <h1>Register</h1>
 
-<form action="{% url 'register' %}"></form>
+<form action="{% url 'register' %}">
 {{form.as_p}}
 <p>Already have an account?<a href="{% url 'login' %}">Login</a></p>
-
+</form>
 {% else %}
 
 <form action="{% url 'login' %}" method = "POST">
