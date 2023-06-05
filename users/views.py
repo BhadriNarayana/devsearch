@@ -37,6 +37,7 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('profiles')
+        else:
 
        
     return render(request, 'users/login_register.html')
