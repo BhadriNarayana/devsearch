@@ -35,6 +35,5 @@ def loginPage(request):
             login(request, user)
             return redirect('profiles')
 
-
        
     return render(request, 'users/login_register.html', {})
