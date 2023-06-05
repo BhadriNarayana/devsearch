@@ -67,4 +67,7 @@ def registerUser(request):
 
             messages.success(request, "User account created successfully!")
 
+            login(request, user)
+
+
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
