@@ -45,4 +45,4 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return 
+    return redirect('login')
