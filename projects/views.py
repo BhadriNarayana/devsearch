@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Project, Review, Tag
 from django.shortcuts import HttpResponse, redirect
-
+from django.contrib.auth.decorators import login_required 
 from .forms import ProjectForm
 # Create your views here.
 
