@@ -73,5 +73,4 @@ def registerUser(request):
         else:
             messages.success(request, 'Error occured during registration')
 
-
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
