@@ -40,3 +40,8 @@ def loginPage(request):
             print("Username or Password is incorrect")
        
     return render(request, 'users/login_register.html')
+
+
+
+def logoutUser(request):
+    
