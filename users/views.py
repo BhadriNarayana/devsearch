@@ -28,11 +28,11 @@ def loginPage(request):
 
         try:
             user = User.objects.get(username = username)
-            print(user)
         except:
             print("User does not exist")   
 
         user = authenticate(request, username = username, password = password)
+        print(user)
 
         if user is not None:
             login(request, user)
