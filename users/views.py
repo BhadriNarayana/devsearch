@@ -50,4 +50,4 @@ def logoutUser(request):
 
 
 def registerUser(request):
-    return render(request, 'user/login_register.html')
+    return render(request, 'user/login_register.html', {})
