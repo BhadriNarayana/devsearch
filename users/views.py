@@ -44,5 +44,7 @@ def loginUser(request):
 
 
 def logoutUser(request):
+    print("before")
     logout(request)
-    return redirect('login')
+    print("after")
+    return redirect("login")
