@@ -22,7 +22,7 @@
       <p>Create a new developer account</p>
     </div>
 
-    <form action="{% url 'register' %}" class="form auth__form">
+    <form action="{% url 'register' %}" method = 'POST' class="form auth__form">
       {% csrf_token %}
       <!-- Input:Text -->
       <div class="form__field">
