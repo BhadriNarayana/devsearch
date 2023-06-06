@@ -31,7 +31,7 @@
         <p>Create a new developer account</p>
       </div>
 
-      <form action="{% url 'login' %}" class="form auth__form">
+      <form action="{% url 'login' %}" method = "POST" class="form auth__form">
         <!-- Input:Text -->
         <div class="form__field">
           <label for="formInput#text">Full Name: </label>
