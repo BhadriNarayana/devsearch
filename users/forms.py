@@ -19,6 +19,7 @@ class CustomCreationForm(UserCreationForm):
             field.widget.attrs.update({'class': 'input'})
 
 
+
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
