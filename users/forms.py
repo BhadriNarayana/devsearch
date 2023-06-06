@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Profile
 
 class CustomCreationForm(UserCreationForm):
     class Meta:
@@ -18,3 +19,5 @@ class CustomCreationForm(UserCreationForm):
             field.widget.attrs.update({'class': 'input'})
 
 
+class ProfileForm(ModelForm):
+    
