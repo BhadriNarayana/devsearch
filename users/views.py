@@ -49,7 +49,7 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    messages.info(request, "User logged out")
+    messages.info(request, "User was logged out")
     return redirect("login")
 
 
