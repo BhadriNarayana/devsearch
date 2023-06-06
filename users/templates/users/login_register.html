@@ -22,6 +22,9 @@
       <div class="form__field">
         <label for="formInput#text">{{field.label}}</label>
         {{field}}
+
+        {% if field.help_text %}
+        {% endif %}
       </div>
       {% endfor %}
       <div class="auth__actions">
