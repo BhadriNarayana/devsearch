@@ -22,6 +22,6 @@ class CustomCreationForm(UserCreationForm):
 
 class ProfileForm(ModelForm):
     class Meta:
-        model = Profile
+        model = Profile 
         fields = '__all__'
         
