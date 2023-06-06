@@ -10,3 +10,5 @@ class CustomCreationForm(UserCreationForm):
         labels = {
             'first_name':'Name',
         }
+
+        
