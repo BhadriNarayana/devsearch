@@ -26,6 +26,9 @@
         {% if field.help_text %}
         <small>{{field.help_text}}</small>
         {% endif %}
+
+        {% for error in field.errors %}
+        {% endfor %}
       </div>
       {% endfor %}
       <div class="auth__actions">
