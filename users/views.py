@@ -80,4 +80,4 @@ def registerUser(request):
 @login_required(login_url='login')
 def editAccount(request):
     form = ProfileForm()
-    return render(request, 'users/profile_form.html')
+    return render(request, 'users/profile_form.html', {'form':form})
