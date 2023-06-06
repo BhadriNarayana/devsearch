@@ -41,10 +41,10 @@
             id="formInput#text"
             type="text"
             name="username"
-            placeholder="Enter your username..."
+            placeholder="Enter your username"
           />
         </div>
-{% comment %} 
+
         <!-- Input:Email -->
         <div class="form__field">
           <label for="formInput#email">Email Address: </label>
@@ -56,7 +56,7 @@
             placeholder="e.g. user@domain.com"
           />
         </div>
- {% endcomment %}
+
 
         <!-- Input:Password -->
         <div class="form__field">
@@ -86,7 +86,7 @@
       </form>
       <div class="auth__alternative">
         <p>Already have an Account?</p>
-        <a href="login.html">Log In</a>
+        <a href="{% url 'login' %}">Log In</a>
       </div>
     </div>
   </div>
