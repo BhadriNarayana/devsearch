@@ -77,4 +77,4 @@ def registerUser(request):
 
 
 def editAccount(request):
-    return render(request, )
+    return render(request, 'users/profile_form.html')
