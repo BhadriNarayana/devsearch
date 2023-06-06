@@ -75,6 +75,6 @@ def registerUser(request):
 
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
 
-@login_required()
+@login_required(login_url='login')
 def editAccount(request):
     return render(request, 'users/profile_form.html')
