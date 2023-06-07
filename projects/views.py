@@ -22,7 +22,7 @@ def create_project(request):
                 form = ProjectForm(request.POST, request.FILES)
 
                 if form.is_valid():
-                        form.save()
+                        project = form.save(commit = False)
                         return redirect('projects')
 
         
