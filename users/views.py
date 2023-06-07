@@ -84,4 +84,5 @@ def editAccount(request):
 
 @login_required
 def userAccount(request):
+    profile = request.user.profile
     return render(request, 'users/account.html', {})
