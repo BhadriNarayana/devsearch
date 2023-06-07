@@ -22,7 +22,6 @@ def userProfile(request, pk):
     return render(request, 'users/user-profile.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
     
 
-
 def loginUser(request):
     page = 'login'
     if request.user.is_authenticated:
