@@ -85,6 +85,6 @@ def editAccount(request):
 @login_required(login_url='login')
 def userAccount(request):
     profile = request.user.profile
-    topSkills = profile.skill_set.exclude(description__exact = "")
-    otherSkills = profile.skill_set.filter(description = "")
+    skills = profile.skill_set.all()
+    
     return render(request, 'users/account.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
