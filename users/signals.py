@@ -25,7 +25,7 @@ def deleteUser(sender, instance, created, **kwargs):
 @receiver(post_save, sender = Profile)
 def updateUser(sender, instance, created, **kwargs):
     profile = instance
-    
+    user = profile.user
     
 
 """ 
