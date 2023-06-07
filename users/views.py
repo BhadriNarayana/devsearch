@@ -49,10 +49,14 @@ def loginUser(request):
     return render(request, 'users/login_register.html', {'page': page})
 
 
+
+
 def logoutUser(request):
     logout(request)
     messages.info(request, "User was logged out")
     return redirect("login")
+
+
 
 
 def registerUser(request):
@@ -77,6 +81,8 @@ def registerUser(request):
 
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
 
+
+
 @login_required(login_url='login')
 def userAccount(request):
     profile = request.user.profile
@@ -84,6 +90,7 @@ def userAccount(request):
     projects = profile.project_set.all()
     
     return render(request, 'users/account.html', {'profile':profile, 'skills':skills, 'projects':projects})
+
 
 
 @login_required(login_url='login')
