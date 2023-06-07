@@ -85,3 +85,9 @@ def userAccount(request):
     projects = profile.project_set.all()
     
     return render(request, 'users/account.html', {'profile':profile, 'skills':skills, 'projects':projects})
+
+
+@login_required(login_url='login')
+def editAccount(request):
+    form = ProfileForm()
+    return render(request, 'users/profile_form.html', {'form':form})
