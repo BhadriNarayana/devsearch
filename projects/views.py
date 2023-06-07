@@ -15,6 +15,7 @@ def projects(request):
 
 @login_required(login_url = "login")
 def create_project(request):
+        profile = request.user.profile
 
         if request.method == 'POST':
                 form = ProjectForm(request.POST, request.FILES)
