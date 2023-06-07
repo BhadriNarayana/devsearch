@@ -95,11 +95,11 @@ def editAccount(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=profile)
         try:
-            if form.is_valid():
-                form.save()
-                return redirect('account')
-        except:
-            messages.error(request, "Error occured")
+        if form.is_valid():
+            form.save()
+            return redirect('account')
+        #except:
+        messages.error(request, "Error occured")
     return render(request, 'users/profile_form.html', {'form':form})
 
 
