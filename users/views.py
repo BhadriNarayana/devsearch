@@ -86,5 +86,6 @@ def editAccount(request):
 def userAccount(request):
     profile = request.user.profile
     skills = profile.skill_set.all()
+    projects = profile.project_set.all()
     
     return render(request, 'users/account.html', {'profile':profile, 'skills':skills})
