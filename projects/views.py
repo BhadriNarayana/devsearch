@@ -23,6 +23,7 @@ def create_project(request):
 
                 if form.is_valid():
                         project = form.save(commit = False)
+                        project.owner = profile
                         return redirect('projects')
 
         
