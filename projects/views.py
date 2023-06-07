@@ -16,6 +16,7 @@ def projects(request):
 @login_required(login_url = "login")
 def create_project(request):
         profile = request.user.profile
+        form = ProjectForm()
 
         if request.method == 'POST':
                 form = ProjectForm(request.POST, request.FILES)
@@ -24,7 +25,7 @@ def create_project(request):
                         form.save()
                         return redirect('projects')
 
-        form = ProjectForm()
+        
 
         return render(request, 'projects/project-form.html', {'form':form, 'tp':3})
 
