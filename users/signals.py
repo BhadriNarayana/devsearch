@@ -22,7 +22,9 @@ def deleteUser(sender, instance, created, **kwargs):
 
 
 
-
+@receiver()
+def updateUser(sender, instance, created, **kwargs):
+    return
 
 """ 
 post_save.connect(createProfile, sender = User)
