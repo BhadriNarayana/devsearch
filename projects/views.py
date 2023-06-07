@@ -34,6 +34,7 @@ def create_project(request):
 
 @login_required(login_url = "login")
 def update_project(request, pk):
+        profile = request.user.profile
         project = Project.objects.get(id = pk)
 
         form = ProjectForm(instance = project)
