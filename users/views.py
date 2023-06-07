@@ -97,4 +97,8 @@ def editAccount(request):
         if form.is_valid():
             form.save()
             return redirect('account')
+        else:
+            messages.error(request, "Error occured")
     return render(request, 'users/profile_form.html', {'form':form})
+
+
