@@ -31,8 +31,7 @@ def updateUser(sender, instance, created, **kwargs):
         user.first_name = profile.name
         user.username = profile.username
 
-
-
+\
 """ 
 post_save.connect(createProfile, sender = User)
 post_delete.connect(deleteUser, sender = Profile) """
