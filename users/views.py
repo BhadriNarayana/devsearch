@@ -94,4 +94,7 @@ def editAccount(request):
 
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILE, instance=profile)
+
+        if form.is_valid():
+            form.save()
     return render(request, 'users/profile_form.html', {'form':form})
