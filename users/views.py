@@ -90,11 +90,12 @@ def userAccount(request):
 @login_required(login_url='login')
 def editAccount(request):
     profile = request.user.profile
-    form = ProfileForm()
+    form = ProfileForm(instance = request.user.profile)
 
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=profile)
 
         if form.is_valid():
             form.save()
+            return redirect('account')
     return render(request, 'users/profile_form.html', {'form':form})
