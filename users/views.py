@@ -94,7 +94,7 @@ def editAccount(request):
 
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=profile)
-        try:
+        #try:
         if form.is_valid():
             form.save()
             return redirect('account')
