@@ -30,8 +30,7 @@ def updateUser(sender, instance, created, **kwargs):
     if created == False:
         user.first_name = profile.name
         user.username = profile.username
-        
-    
+
 
 """ 
 post_save.connect(createProfile, sender = User)
