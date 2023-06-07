@@ -77,7 +77,6 @@ def registerUser(request):
 
     return render(request, 'users/login_register.html', {'page':page, 'form':form})
 
-
 @login_required(login_url='login')
 def userAccount(request):
     profile = request.user.profile
