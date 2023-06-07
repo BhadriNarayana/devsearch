@@ -82,6 +82,6 @@ def editAccount(request):
     form = ProfileForm()
     return render(request, 'users/profile_form.html', {'form':form})
 
-
+@login_required
 def userAccount(request):
     return render(request, 'users/account.html', {})
