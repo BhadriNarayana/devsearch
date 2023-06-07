@@ -99,7 +99,7 @@ def editAccount(request):
             form.save()
             return redirect('account')
         #except:
-        messages.error(request, "Error occured")
+        #messages.error(request, "Error occured")
     return render(request, 'users/profile_form.html', {'form':form})
 
 
