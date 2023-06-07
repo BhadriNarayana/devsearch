@@ -70,7 +70,7 @@ def registerUser(request):
             messages.success(request, "User account created successfully!")
 
             login(request, user)
-            return redirect('profiles')
+            return redirect('edit-account')
         
         else:
             messages.success(request, 'Error occured during registration')
@@ -94,7 +94,6 @@ def editAccount(request):
 
     if request.method == 'POST':
         form = ProfileForm(request.POST, request.FILES, instance=profile)
-
         if form.is_valid():
             form.save()
             return redirect('account')
