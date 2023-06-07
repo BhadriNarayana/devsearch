@@ -23,11 +23,11 @@
                 <div class="form__field">
                     <label for="formInput#text">{{field.label}}: </label>
                     {{field}}
-                    {% if field.errors %}
+                    
                     {% for error in field.errors %}
                     {{error}}
                     {% endfor %}
-                    {% endif %}
+                    
                 </div>
                 {% endfor %}      
 
