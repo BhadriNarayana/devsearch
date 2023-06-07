@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Edit Account</h1>
 
-<form action="{% url 'edit-account' %}" method = 'POST' enctype = >
+<form action="{% url 'edit-account' %}" method = 'POST' enctype = "multipart">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value = "Submit">
