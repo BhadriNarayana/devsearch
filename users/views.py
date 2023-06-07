@@ -92,5 +92,5 @@ def editAccount(request):
     form = ProfileForm()
 
     if request.method == 'POST':
-        
+        form = ProfileForm(request.POST, request.FILE, instance=)
     return render(request, 'users/profile_form.html', {'form':form})
