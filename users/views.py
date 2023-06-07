@@ -87,4 +87,4 @@ def userAccount(request):
     profile = request.user.profile
     skills = profile.skill_set.all()
     
-    return render(request, 'users/account.html', {'profile':profile, 'topSkills':topSkills, 'otherSkills':otherSkills})
+    return render(request, 'users/account.html', {'profile':profile, 'skills':skills})
