@@ -82,7 +82,7 @@ def editAccount(request):
     form = ProfileForm()
     return render(request, 'users/profile_form.html', {'form':form})
 
-@login_required
+@login_required(login_url='login')
 def userAccount(request):
     profile = request.user.profile
     topSkills = profile.skill_set.exclude(description__exact = "")
