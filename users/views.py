@@ -14,6 +14,8 @@ def profiles(request):
 
     if request.GET.get('search_query'):
         search_query = request.GET.get('search_query')
+    
+    print()    
 
     profiles = Profile.objects.all()
     return render(request, 'users/profiles.html', {'profiles':profiles})
