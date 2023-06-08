@@ -21,6 +21,7 @@ def profiles(request):
     skills = Skill.objects.filter(name__iexact = search_query)
     profiles = Profile.objects.filter(Q(name__icontains = search_query) |
                                        Q(short_intro__icontains = search_query) |
+                                       Q(skills__in = skills)
                                        )   
 
     return render(request, 'users/profiles.html', {'profiles':profiles, 'search_query':search_query})
