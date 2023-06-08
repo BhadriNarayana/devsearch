@@ -51,6 +51,7 @@ def update_project(request, pk):
 
 @login_required(login_url = "login")
 def delete_project(request, pk):
+        page = 'project'
         profile = request.user.profile
         project = profile.project_set.get(id = pk)
 
