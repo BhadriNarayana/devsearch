@@ -140,4 +140,5 @@ def updateSkill(request, pk):
             form.save()
             messages.success(request, "Skill was updated successfully!")
             return redirect('account')
+        
     return render(request, 'users/skill_form.html', {'form':form})
