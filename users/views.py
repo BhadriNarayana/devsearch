@@ -143,6 +143,8 @@ def updateSkill(request, pk):
         
     return render(request, 'users/skill_form.html', {'form':form})
 
+
+
 login_required()
 def deleteSkill(request, pk):
     page = 'skill'
