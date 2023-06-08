@@ -155,3 +155,4 @@ def deleteSkill(request, pk):
         return redirect('account')
 
     return render(request, 'delete-object.html', {'object':skill})
+
