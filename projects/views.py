@@ -11,18 +11,7 @@ def project(request, pk):
         return render(request, 'projects/single-project.html', {'project':project})
 
 def projects(request):       
-        search_query = ''
-        if request.GET.get('search_query'):
-
-                tags = Tag.objects.filter(name__icontains = search_query)
-                search_query = request.GET.get('search_query')
-
-        projects = Project.objects.distinct().filter(Q(title__icontains = search_query) |
-                                          Q(description__icontains = search_query) |
-                                          Q(owner__name__icontains = search_query) |
-                                          Q(tags__in = tags)
-                                          )        
-
+        
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
 
 @login_required(login_url = "login")
