@@ -1,7 +1,7 @@
 from .models import Profile, Skill
 
 
-def searchProjects(request):   
+def searchProfiles(request):   
     search_query = ''
 
     if request.GET.get('search_query'):
