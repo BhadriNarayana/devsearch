@@ -111,6 +111,7 @@ def editAccount(request):
 
 @login_required(login_url= 'login')
 def createSkill(request):
+    profile = request.user.profile
     form = SkillForm()
 
     if request.method == 'POST':
