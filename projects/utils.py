@@ -1,5 +1,5 @@
 from .models import Tag, Project
-
+from django.db.models import Q
 def searchProjects(request):
 
     search_query = ''
