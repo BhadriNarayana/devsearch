@@ -4,6 +4,7 @@ from django.shortcuts import HttpResponse, redirect
 from django.contrib.auth.decorators import login_required 
 from django.db.models import Q
 from .forms import ProjectForm
+from .utils import searchProjects
 # Create your views here.
 
 def project(request, pk):
@@ -11,7 +12,7 @@ def project(request, pk):
         return render(request, 'projects/single-project.html', {'project':project})
 
 def projects(request):       
-        
+        projects, search_query = searchProjects(request)
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
 
 @login_required(login_url = "login")
