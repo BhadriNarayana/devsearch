@@ -117,6 +117,7 @@ def createSkill(request):
         form = SkillForm(request.POST)
 
         if form.is_valid():
-            form.save()
+            skill = form.save(commit = False)
+            
 
     return render(request, 'users/skill_form.html', {'form':form})
