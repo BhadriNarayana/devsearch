@@ -11,7 +11,7 @@
             <form class="form" method="POST" action= "">
                 {% csrf_token %}
                 <p>Are you sure you want to delete {{object}}</p>
-                <a href="{% url 'project' object.id%}">Go Back</a>               
+                <a class="btn btn--sub btn--lg  my-md" href="{% url 'project' object.id%}">Go Back</a>               
                 <input class="btn btn--sub btn--lg  my-md" type="submit" value="Confirm" />
             </form>
         </div>
