@@ -110,3 +110,5 @@ def editAccount(request):
     return render(request, 'users/profile_form.html', {'form':form})
 
 
+def createSkill(request):
+    return
