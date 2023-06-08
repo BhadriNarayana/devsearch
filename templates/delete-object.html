@@ -7,7 +7,7 @@
 <form method = "POST">
     {% csrf_token %}
     <button>
-        <a href="{% url 'project' project.id%}">Go Back</a>
+        <a href="{% url 'project' object.id%}">Go Back</a>
     </button>
     <input type="submit" value = "confirm">
 </form>
