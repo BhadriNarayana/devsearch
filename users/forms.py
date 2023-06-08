@@ -32,3 +32,6 @@ class ProfileForm(ModelForm):
             field.widget.attrs.update({'class': 'input'})
 
 
+class SkillForm(ModelForm):
+    class Meta:
+        model = Skill
