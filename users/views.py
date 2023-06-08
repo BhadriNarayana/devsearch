@@ -154,5 +154,4 @@ def deleteSkill(request, pk):
         messages.success(request, 'Skill was deleted successfully!')
         return redirect('account')
 
-
     return render(request, 'delete-object.html', {'object':skill})
