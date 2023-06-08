@@ -37,6 +37,7 @@ class SkillForm(ModelForm):
         model = Skill
         fields = '__all__'
         exclude = ['owner']
+        
     def __init__(self, *args, **kwargs):
         super(CustomCreationForm, self).__init__(*args, **kwargs)
 
