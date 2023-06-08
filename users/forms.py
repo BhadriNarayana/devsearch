@@ -37,3 +37,8 @@ class SkillForm(ModelForm):
         model = Skill
         fields = '__all__'
         exclude = ['owner']
+    def __init__(self, *args, **kwargs):
+        super(CustomCreationForm, self).__init__(*args, **kwargs)
+
+        for name, field in self.fields.items():
+            field.widget.attrs.update({'class': 'input'})
