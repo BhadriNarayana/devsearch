@@ -1,3 +1,5 @@
+from .models import Profile, Skill
+
 
 def searchProjects(request):   
     search_query = ''
