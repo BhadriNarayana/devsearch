@@ -15,7 +15,7 @@ def profiles(request):
     if request.GET.get('search_query'):
         search_query = request.GET.get('search_query')
     
-    print()    
+    print('SEARCH QUERY: ', search_query)    
 
     profiles = Profile.objects.all()
     return render(request, 'users/profiles.html', {'profiles':profiles})
