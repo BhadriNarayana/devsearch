@@ -11,6 +11,16 @@ def project(request, pk):
         return render(request, 'projects/single-project.html', {'project':project})
 
 def projects(request):
+
+        search_query = ''
+
+        if request.GET.get('search_query'):
+                
+                search_query = request.GET.get('search_query')
+
+
+
+
         projects = Project.objects.all()
         return render(request, 'projects/projects.html', {'projects':projects})
 
