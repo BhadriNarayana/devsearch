@@ -145,6 +145,7 @@ def updateSkill(request, pk):
 
 login_required()
 def deleteSkill(request, pk):
+    page = 'skill'
     profile = request.user.profile
     skill = profile.skill_set.get(id = pk)
 
