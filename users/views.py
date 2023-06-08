@@ -6,6 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import CustomCreationForm, SkillForm
 
+from django.db.models import Q
+
 from .forms import ProfileForm
 # Create your views here.
 
