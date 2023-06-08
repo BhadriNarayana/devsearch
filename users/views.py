@@ -136,9 +136,8 @@ def updateSkill(request, pk):
         form = SkillForm(request.POST, instance = skill)
 
         if form.is_valid():
-            skill = form.save(commit = False)
-            skill.owner = profile
-            skill.save()
+
+            form.save()
             return redirect('account')
 
     return render(request, 'users/skill_form.html', {'form':form})
