@@ -4,7 +4,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import CustomCreationForm
+from .forms import CustomCreationForm, SkillForm
 
 from .forms import ProfileForm
 # Create your views here.
