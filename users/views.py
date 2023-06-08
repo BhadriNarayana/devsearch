@@ -120,5 +120,6 @@ def createSkill(request):
         if form.is_valid():
             skill = form.save(commit = False)
             skill.owner = profile
+            skill.save()
 
     return render(request, 'users/skill_form.html', {'form':form})
