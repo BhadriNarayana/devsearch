@@ -36,3 +36,4 @@ class SkillForm(ModelForm):
     class Meta:
         model = Skill
         fields = '__all__'
+        exclude = ['owner']
