@@ -7,12 +7,12 @@ from django.contrib.auth.decorators import login_required
 from .forms import CustomCreationForm, SkillForm
 
 from django.db.models import Q
-
+from .utils import searchProjects
 from .forms import ProfileForm
 # Create your views here.
 
 def profiles(request):
-    
+    profiles, search_query = searchProjects(request)
     return render(request, 'users/profiles.html', {'profiles':profiles, 'search_query':search_query})
 
 
