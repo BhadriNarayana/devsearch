@@ -16,8 +16,8 @@ def profiles(request):
         search_query = request.GET.get('search_query')
 
     profiles = Profile.objects.filter(name__icontains = search_query)   
-         
-    return render(request, 'users/profiles.html', {'profiles':profiles})
+
+    return render(request, 'users/profiles.html', {'profiles':profiles, 'search_query':search_query})
 
 
 def userProfile(request, pk):
