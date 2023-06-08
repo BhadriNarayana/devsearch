@@ -151,6 +151,7 @@ def deleteSkill(request, pk):
 
     if request.method == 'POST':
         skill.delete()
+        messages.success(request, 'Skill was deleted successfully!')
         return redirect('account')
 
 
