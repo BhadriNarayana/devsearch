@@ -10,6 +10,12 @@ from .forms import ProfileForm
 # Create your views here.
 
 def profiles(request):
+    search_query = ''
+
+    if request.GET.get('search_query'):
+
+
+
     profiles = Profile.objects.all()
     return render(request, 'users/profiles.html', {'profiles':profiles})
 
