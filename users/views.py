@@ -136,7 +136,6 @@ def updateSkill(request, pk):
         form = SkillForm(request.POST, instance = skill)
 
         if form.is_valid():
-
             form.save()
             return redirect('account')
 
