@@ -145,4 +145,4 @@ def updateSkill(request, pk):
 
 login_required()
 def deleteSkill(request):
-    return
+    return render(request, 'delete-object.html', {})
