@@ -121,5 +121,6 @@ def createSkill(request):
             skill = form.save(commit = False)
             skill.owner = profile
             skill.save()
+            return redirect('account')
 
     return render(request, 'users/skill_form.html', {'form':form})
