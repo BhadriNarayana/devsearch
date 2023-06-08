@@ -111,4 +111,6 @@ def editAccount(request):
 
 @login_required(login_url= 'login')
 def createSkill(request):
-    return render(request, 'users/skill_form.html', {})
+    form = SkillForm()
+
+    return render(request, 'users/skill_form.html', {'form':form})
