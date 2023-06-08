@@ -13,3 +13,4 @@ def searchProjects(request):
                                         Q(owner__name__icontains = search_query) |
                                         Q(tags__in = tags)
                                         )        
+    return projects, search_query 
