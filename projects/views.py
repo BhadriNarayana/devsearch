@@ -10,10 +10,12 @@ def project(request, pk):
         project = Project.objects.get(id = pk)        
         return render(request, 'projects/single-project.html', {'project':project})
 
-def projects(request):
-
+def projects(request):       
         search_query = ''
         if request.GET.get('search_query'):
+
+                tags = Tag.objects.filter(name__icontains = search_query)
+
                 search_query = request.GET.get('search_query')
 
         projects = Project.objects.distinct().filter(Q(title__icontains = search_query) |
