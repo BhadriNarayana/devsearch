@@ -144,5 +144,5 @@ def updateSkill(request, pk):
     return render(request, 'users/skill_form.html', {'form':form})
 
 login_required()
-def deleteSkill(request):
+def deleteSkill(request, pk):
     return render(request, 'delete-object.html', {})
