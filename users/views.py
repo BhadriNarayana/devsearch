@@ -149,4 +149,8 @@ def deleteSkill(request, pk):
     profile = request.user.profile
     skill = profile.skill_set.get(id = pk)
 
+    if request.method == 'POST':
+        skill.delete()
+
+
     return render(request, 'delete-object.html', {'object':skill})
