@@ -35,3 +35,4 @@ class ProfileForm(ModelForm):
 class SkillForm(ModelForm):
     class Meta:
         model = Skill
+        fields = '__all__'
