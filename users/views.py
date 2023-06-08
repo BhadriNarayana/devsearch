@@ -109,6 +109,8 @@ def editAccount(request):
         #messages.error(request, "Error occured")
     return render(request, 'users/profile_form.html', {'form':form})
 
+
+
 @login_required(login_url= 'login')
 def createSkill(request):
     profile = request.user.profile
