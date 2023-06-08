@@ -151,6 +151,7 @@ def deleteSkill(request, pk):
 
     if request.method == 'POST':
         skill.delete()
+        return redirect('account')
 
 
     return render(request, 'delete-object.html', {'object':skill})
