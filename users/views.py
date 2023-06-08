@@ -113,4 +113,10 @@ def editAccount(request):
 def createSkill(request):
     form = SkillForm()
 
+    if request.method == 'POST':
+        form = SkillForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+
     return render(request, 'users/skill_form.html', {'form':form})
