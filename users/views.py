@@ -142,3 +142,7 @@ def updateSkill(request, pk):
             return redirect('account')
         
     return render(request, 'users/skill_form.html', {'form':form})
+
+login_required()
+def deleteSkill(request):
+    return
