@@ -8,7 +8,7 @@ urlpatterns = [
     path('profile/<str:pk>/', views.userProfile, name = 'profile'),
 
     path('edit-account/', views.editAccount, name = 'edit-account'),
-    path('account/', views.userAccount, name = 'account'),   
+    path('account/', views.userAccount, name = 'accounty'),   
     path('create-skill/', views.createSkill, name = 'create-skill'),
     path('update-skill/<str:pk>/', views.updateSkill, name = 'update-skill'),
     path('delete-skill/<str:pk>/', views.deleteSkill, name = 'delete-skill'),
