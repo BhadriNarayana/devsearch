@@ -130,9 +130,10 @@ def createSkill(request):
 def updateSkill(request, pk):
     profile = request.user.profile
     skill = profile.skill_set.get(id = pk)
+
     form = SkillForm(instance = skill)
     if request.method == 'POST':
-        form = SkillForm(request.POST)
+        form = SkillForm(request.POST, instance = skill)
 
         if form.is_valid():
             skill = form.save(commit = False)
