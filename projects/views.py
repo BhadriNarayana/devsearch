@@ -25,7 +25,7 @@ def projects(request):
 
 
         projects = Project.objects.all()
-        return render(request, 'projects/projects.html', {'projects':projects})
+        return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
 
 @login_required(login_url = "login")
 def create_project(request):
