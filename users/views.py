@@ -111,4 +111,4 @@ def editAccount(request):
 
 
 def createSkill(request):
-    return
+    return render(request, 'users/skill_form.html', {})
