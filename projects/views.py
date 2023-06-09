@@ -17,7 +17,7 @@ def project(request, pk):
 def projects(request):       
         projects, search_query = searchProjects(request)
 
-        page = 1
+        page = request.GET.get('page')
         results = 3
 
         paginator = Paginator(projects, results)
