@@ -33,7 +33,7 @@ def projects(request):
                 projects = paginator.page(page)                
 
 
-        return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
+        return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query, 'paginator':paginator})
 
 @login_required(login_url = "login")
 def create_project(request):
