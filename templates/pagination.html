@@ -43,7 +43,10 @@
       pageLinks[i].addEventListener('click', (e)=>{
 
         e.preventDefault()
-        console.log('button clicked')
+        
+
+        let page = this.dataset.page
+        console.log('Page ', page)
 
       })
     }
