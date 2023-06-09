@@ -1,4 +1,4 @@
-from .models import Project
+from .models import Project, Review
 
 from django.forms import ModelForm
 from django import forms
@@ -20,3 +20,7 @@ class ProjectForm(ModelForm):
             
 
 
+class ReviewForm(ModelForm):
+    class Meta:
+        model = Review
+        fields = ['name', 'body']
