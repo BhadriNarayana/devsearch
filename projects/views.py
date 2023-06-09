@@ -33,10 +33,10 @@ def projects(request):
                 projects = paginator.page(page)
 
 
-        custom_page = range(1, 1000)                        
+        custom_range = range(1, 1000)                        
 
 
-        return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query, 'paginator':paginator})
+        return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query, 'paginator':paginator, 'custom_range': custom_range})
 
 @login_required(login_url = "login")
 def create_project(request):
