@@ -84,8 +84,8 @@
         {% endfor %}
 
 
-        {% if projects.has_previous %}
-        <li><a href="?page={{projects.previous_page_number}}" class="btn btn--link">&#10094; Prev</a></li>
+        {% if projects.has_next %}
+        <li><a href="?page={{projects.next_page_number}}" class="btn btn--link">&#10094; Prev</a></li>
         
         {% endif %}
 
