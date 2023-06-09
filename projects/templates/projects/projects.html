@@ -66,6 +66,10 @@
         {% for page in paginator.page_range %}
         {% if page == projects.number %}
 
+        <li><a href="?page={{page}}" class="btn btn--sub">{{page}}</a></li>
+
+        {% else %}
+
         
         <li><a href="?page={{page}}" class="btn btn--link">{{page}}</a></li>
         {% endif %}
