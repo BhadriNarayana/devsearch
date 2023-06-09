@@ -49,9 +49,10 @@
             <div class="commentList">
               <div class="comment">
                 {% for review in project.review_set.all %}
-                <a href="profile.html">
+                {% if review.body %}
+                <a href="{% url 'user-profile' review.owner.id %}">
                   <img class="avatar avatar--md"
-                    src="https://pbs.twimg.com/profile_images/1335382240931368961/b3wSZKj4_400x400.jpg" alt="user" />
+                    src="{{review.ownner.profile_image}}" alt="user" />
                 </a>
 
                
@@ -62,6 +63,8 @@
                     {{review.body}}
                   </p>
                 </div>
+
+                {% endif %}
 
                 {% endfor %}
               </div>
