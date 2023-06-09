@@ -26,9 +26,11 @@ def projects(request):
                 projects = paginator.page(page)
         except PageNotAnInteger:
                 page = 1
+                projects = paginator.page(page)
 
         except EmptyPage:
-                page = paginator.num_pages                
+                page = paginator.num_pages
+                projects = paginator.page(page)                
 
 
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
