@@ -64,8 +64,11 @@
     <div class="pagination">
       <ul class="container">
         {% for page in paginator.page_range %}
-        {% if page == projects.number %}{% endif %}
+        {% if page == projects.number %}
+
+        
         <li><a href="?page={{page}}" class="btn btn--link">{{page}}</a></li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>
