@@ -168,4 +168,11 @@ def deleteSkill(request, pk):
 
 @login_required
 def inbox(request):
-    return render(request, 'users/inbox.html', {})
+
+    profile = request.user.profile
+    messageRequests = profile.messages.all()
+
+    unreadCount = messageRequests.filter(is_read = False).count()
+    context = {'messageRequests': messageRequests, 'unreadCount':unreadCount}
+
+    return render(request, 'users/inbox.html', context)
