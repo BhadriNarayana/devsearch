@@ -4,7 +4,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import CustomCreationForm, SkillForm
+from .forms import CustomCreationForm, SkillForm, MessageForm
 
 
 from .utils import searchProfiles, paginateProfiles
@@ -187,3 +187,16 @@ def viewMessage(request, pk):
         message.save()
     context = {'message':message}
     return render(request, 'users/message.html', context)
+
+
+
+
+
+def createMessage(request, pk):
+    recipient = Profile.objects.get(id = pk)
+
+    form = MessageForm()
+    
+
+    context = {'recipient':recipient}
+    return render(request, 'users/message_form.html', {})
