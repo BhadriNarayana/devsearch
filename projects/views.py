@@ -16,6 +16,16 @@ def project(request, pk):
 
 def projects(request):       
         projects, search_query = searchProjects(request)
+
+        page = 1
+        results = 3
+
+        paginator = Paginator(projects, results)
+
+
+
+
+
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
 
 @login_required(login_url = "login")
