@@ -25,7 +25,6 @@ def projects(request):
         projects = paginator.page(page)
 
 
-
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
 
 @login_required(login_url = "login")
