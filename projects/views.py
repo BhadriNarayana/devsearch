@@ -32,8 +32,20 @@ def projects(request):
                 page = paginator.num_pages
                 projects = paginator.page(page)
 
+        leftIndex = (int(page) - 4)
 
-        custom_range = range(1, 1000)
+        if leftIndex < 1:
+                leftIndex = 1
+
+
+        rightIndex = (int(page) + 5)
+
+        if rightIndex > paginator.num_pages:
+                rightIndex = paginator.num_pages + 1
+
+
+
+        custom_range = range(leftIndex, rightIndex)
 
         context = {'projects':projects, 'search_query':search_query, 'paginator':paginator, 'custom_range': custom_range}                        
 
