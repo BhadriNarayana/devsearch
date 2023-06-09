@@ -22,7 +22,14 @@ def projects(request):
 
         paginator = Paginator(projects, results)
 
-        projects = paginator.page(page)
+        try:
+
+                projects = paginator.page(page)
+        except PageNotAnInteger:
+                page = 1
+
+        except EmptyPage:
+                page = paginator.num_pages                
 
 
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query})
