@@ -11,7 +11,16 @@ from .utils import searchProjects, paginateProjects
 
 def project(request, pk):
         project = Project.objects.get(id = pk)
-        form = ReviewForm()        
+        form = ReviewForm() 
+
+        if request.method == 'POST':
+                form = ReviewForm(request.POST)
+                review = form.save(commit = False)
+                review.owner = request.user.profile
+                review.project = project
+                review.save()        
+
+               
         return render(request, 'projects/single-project.html', {'project':project, 'form':form})
 
 def projects(request):       
