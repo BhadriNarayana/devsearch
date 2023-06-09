@@ -22,7 +22,7 @@ def projects(request):
 
         paginator = Paginator(projects, results)
 
-
+        projects = paginator.page(page)
 
 
 
