@@ -6,7 +6,7 @@ from .forms import ProjectForm
 from .utils import searchProjects
 
 
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # Create your views here.
 
