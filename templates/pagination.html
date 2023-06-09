@@ -46,7 +46,12 @@
         
 
         let page = this.dataset.page
-        console.log('Page ', page)
+
+        searchForm.innerHTML += `<input value = ${page} name = "page" hidden/>`
+
+        searchForm.submit()
+        
+
 
       })
     }
