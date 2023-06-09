@@ -23,11 +23,11 @@ class ProjectForm(ModelForm):
 class ReviewForm(ModelForm):
     class Meta:
         model = Review
-        fields = ['value', 'body']
+        fields = ['body', 'value']
 
         labels = {
-            'value': 'Place your vote',
-            'body': 'Add comment with your vote'
+            'body': 'Place your vote',
+            'value': 'Add comment with your vote',
         }
 
     def __init__(self, *args, **kwargs):
