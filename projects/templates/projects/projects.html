@@ -72,7 +72,7 @@
 
 
 
-        {% for page in paginator.page_range %}
+        {% for page in custom_range %}
         {% if page == projects.number %}
 
         <li><a href="?page={{page}}" class="btn btn--sub">{{page}}</a></li>
