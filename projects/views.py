@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import ProjectForm, ReviewForm
 from .utils import searchProjects, paginateProjects
 
-
+from django.contrib import messages
 
 # Create your views here.
 
@@ -18,7 +18,9 @@ def project(request, pk):
                 review = form.save(commit = False)
                 review.owner = request.user.profile
                 review.project = project
-                review.save()        
+                review.save()      
+                messages.success(request, "Successfully posted your review")
+                return redirect('project', pk = project.id)  
 
                
         return render(request, 'projects/single-project.html', {'project':project, 'form':form})
