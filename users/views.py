@@ -165,3 +165,7 @@ def deleteSkill(request, pk):
 
     return render(request, 'delete-object.html', {'object':skill})
 
+
+@login_required
+def inbox(request):
+    return render(request, 'users/inbox.html', {})
