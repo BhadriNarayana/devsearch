@@ -23,7 +23,6 @@ def projects(request):
         paginator = Paginator(projects, results)
 
         try:
-
                 projects = paginator.page(page)
         except PageNotAnInteger:
                 page = 1
