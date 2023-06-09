@@ -24,11 +24,11 @@ class ReviewForm(ModelForm):
     class Meta:
         model = Review
         fields = ['value', 'body']
-
         labels = {
             'value': 'Place your vote',
             'body': 'Add comment with your vote'
         }
+
 
     def __init__(self, *args, **kwargs):
         super(ReviewForm, self).__init__(*args, **kwargs)
