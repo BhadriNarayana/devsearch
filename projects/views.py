@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Project, Review, Tag
 from django.shortcuts import HttpResponse, redirect
 from django.contrib.auth.decorators import login_required 
-from .forms import ProjectForm
+from .forms import ProjectForm, ReviewForm
 from .utils import searchProjects, paginateProjects
 
 
@@ -10,8 +10,9 @@ from .utils import searchProjects, paginateProjects
 # Create your views here.
 
 def project(request, pk):
-        project = Project.objects.get(id = pk)        
-        return render(request, 'projects/single-project.html', {'project':project})
+        project = Project.objects.get(id = pk)
+        form = ReviewForm()        
+        return render(request, 'projects/single-project.html', {'project':project, 'form':form})
 
 def projects(request):       
         projects, search_query = searchProjects(request)
