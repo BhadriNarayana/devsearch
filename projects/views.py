@@ -4,6 +4,10 @@ from django.shortcuts import HttpResponse, redirect
 from django.contrib.auth.decorators import login_required 
 from .forms import ProjectForm
 from .utils import searchProjects
+
+
+from django.core.paginator import Paginator
+
 # Create your views here.
 
 def project(request, pk):
