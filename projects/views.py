@@ -30,7 +30,10 @@ def projects(request):
 
         except EmptyPage:
                 page = paginator.num_pages
-                projects = paginator.page(page)                
+                projects = paginator.page(page)
+
+
+        custom_page = range(1, 1000)                        
 
 
         return render(request, 'projects/projects.html', {'projects':projects, 'search_query':search_query, 'paginator':paginator})
