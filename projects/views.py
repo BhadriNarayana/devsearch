@@ -19,6 +19,8 @@ def project(request, pk):
                 review.owner = request.user.profile
                 review.project = project
                 review.save()      
+
+                project.getVoteCount
                 messages.success(request, "Successfully posted your review")
                 return redirect('project', pk = project.id)  
 
