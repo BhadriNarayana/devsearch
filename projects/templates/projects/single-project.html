@@ -47,12 +47,13 @@
 
 
             <div class="commentList">
-              <div class="comment">
-                {% for review in project.review_set.all %}
+              {% for review in project.review_set.all %}
                 {% if review.body %}
+              <div class="comment">
+                
                 <a href="{% url 'profile' review.owner.id %}">
                   <img class="avatar avatar--md"
-                    src="{{review.ownner.profile_image}}" alt="user" />
+                    src="{{review.owner.profile_image.url}}" alt="user" />
                 </a>
 
                
@@ -66,9 +67,9 @@
 
                 {% endif %}
 
-                {% endfor %}
+                
               </div>
-              
+              {% endfor %}
             </div>
           </div>
         </div>
