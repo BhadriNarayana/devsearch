@@ -25,7 +25,7 @@ class Project(models.Model):
         return self.title
     
     class Meta:
-        ordering = ['-created']
+        ordering = ['-vote_ratio', '-vote_total']
 
     @property
     def getVoteCount(self):
@@ -35,8 +35,8 @@ class Project(models.Model):
 
         ratio = (upVotes / totalVotes) * 100
 
-        self.vote_total = totalVotes
-        self.vote_ratio = ratio
+        self.votes_total = totalVotes
+        self.votes_ratio = ratio
         self.save()
 
     
