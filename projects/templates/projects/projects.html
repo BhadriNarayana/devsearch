@@ -80,7 +80,15 @@
         
         <li><a href="?page={{page}}" class="btn btn--link">{{page}}</a></li>
         {% endif %}
+
         {% endfor %}
+
+
+        {% if projects.has_previous %}
+        <li><a href="?page={{projects.previous_page_number}}" class="btn btn--link">&#10094; Prev</a></li>
+        
+        {% endif %}
+
 
 
       </ul>
