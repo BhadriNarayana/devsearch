@@ -129,7 +129,7 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = 'bhadrinarayana445@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'Bhadrisdummy789'
+EMAIL_HOST_PASSWORD = 'jvvfgzazcmifsjst'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
