@@ -1,15 +1,31 @@
-{% extends 'main.html' %}
 {% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <!-- Icon - IconMonster -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Mumble UI -->
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" /> 
+  <!-- Dev Search UI -->
+  <link rel="stylesheet" href="{% static 'styles/app.css' %}"/> 
+
+  <title>DevSearch - Connect with Developers!</title>
+</head>
+<body>
+  
 
 {% if page == 'register' %}
 
 <div class="auth">
   <div class="card">
     <div class="auth__header text-center">
-      <a href="/">
+      {% comment %} <a href="/">
         <img src="{% static 'images/icon.svg' %}" alt="icon" />
-      </a>
+      </a> {% endcomment %}
       <h3>Register an Account</h3>
       <p>Create a new developer account</p>
     </div>
@@ -95,4 +111,7 @@
 
 {% endif %}
 
-{% endblock content %}
+  
+</body>
+</html>
+

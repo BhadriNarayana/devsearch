@@ -80,13 +80,34 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'devmediadb',
+        'USER': 'bhadrinarayana',
+        'PASSWORD': 'jCTc9i7LLTwJ4Y756IL7t9pNS5InLMtc',
+        'HOST': 'dpg-ci3hvebhp8u1a18pmvjg-a',
+        'PORT': '5432',
+    }
+}
+
+
+
+
+
+
+
+
+
+
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+ """
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -119,6 +140,11 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+
+
+
+""" 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
@@ -130,6 +156,10 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'bhadrinarayana445@gmail.com'
 
 EMAIL_HOST_PASSWORD = 'jvvfgzazcmifsjst'
+ """
+
+
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
