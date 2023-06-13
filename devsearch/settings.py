@@ -12,20 +12,21 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1(fojf_owclv3s#z^u)dsb1^86otcalpa6)ks1l(lc_=r^jhml'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = config('DEBUG', cast = bool)
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
@@ -81,20 +82,25 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'devmediadb',
-        'USER': 'bhadrinarayana',
-        'PASSWORD': 'jCTc9i7LLTwJ4Y756IL7t9pNS5InLMtc',
-        'HOST': 'dpg-ci3hvebhp8u1a18pmvjg-a',
+        'NAME': 'bhadrinarayana',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
 
+ """
 
+import dj_database_url
 
-
+DATABASES = {
+    'default': dj_database_url.parse(config('DATABASE_URL')),
+    #'default': dj_database_url.parse('postgres://bhadrinarayana:jCTc9i7LLTwJ4Y756IL7t9pNS5InLMtc@dpg-ci3hvebhp8u1a18pmvjg-a.oregon-postgres.render.com/devmediadb') 
+    }
 
 
 
